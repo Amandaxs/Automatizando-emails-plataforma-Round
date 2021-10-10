@@ -37,3 +37,8 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+## Ignore a pasta de dados e a de arquivos temporarios
+/data
+tmp.html
+/tmp_files
