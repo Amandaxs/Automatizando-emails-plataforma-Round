@@ -2,8 +2,8 @@ library(magick)
 
 #### as moedas doadas , recebidas e numero de pessoas foram calculados no script de analises
 ## Imagens que foram salvas no script de analises
-top3d<- image_read("top3D.png") %>% image_scale("900")
-top3r<- image_read("top3R.png")%>% image_scale("900")
+top3d<- image_read("top3d.png") %>% image_scale("900")
+top3r<- image_read("top3r.png")%>% image_scale("900")
 wordcl <- image_read("wordcl.png") %>% image_scale("770")
 ## Carregando os fundos
 fundo <- image_read("imagens/mvp_round_1.png")
@@ -35,6 +35,7 @@ image_annotate(fundo , nome,
   image_composite( top3r, offset = "+115+1000") %>%
   ##  Inserindo imagem do top3 doados
   image_composite( top3d, offset = "+115+1440")
+
   
   
   

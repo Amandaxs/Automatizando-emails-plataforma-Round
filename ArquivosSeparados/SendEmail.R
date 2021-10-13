@@ -10,7 +10,8 @@ Email[["importance"]] = "2"
 Email[["subject"]] = "TESTE 1 MVP Moedas"
 Email[["body"]] = 
   "Primeira versão só pra testar o uso de imagem e mandar o email via código"
-Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\projetoRound\\mvp_round_1.png")
-#
+Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\Automatizando-emails-plataforma-Round\\top3d.png")
+Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\Automatizando-emails-plataforma-Round\\top3r.png")
+#C:\Users\DPCDTI\Desktop\Automatizando-emails-plataforma-Round
 Email$Send()
 rm(Outlook, Email)
