@@ -9,7 +9,7 @@ dados <- fromJSON(file = file)[['transactions']]
 
 
 ## Extraindo as colunas que estavam dentro de outras
-dados2<- data.frame(Reduce(rbind, dados)) %>%
+dados2 <- data.frame(Reduce(rbind, dados))%>%
   unnest_wider(sender,names_repair = "unique") %>%
   rename(senderEmail = "email", senderId = "_id", senderName = "name",
          SenderUserAvatar = "user_avatar", senderDepart = "depart",
@@ -20,6 +20,7 @@ dados2<- data.frame(Reduce(rbind, dados)) %>%
          receiverUserAvatar = "user_avatar", receiverDepart = "depart",
          receiverPosition = "position", receiverwallet = "wallet",
          receiverActive = "active")
+
 return(dados2)
 }
 
@@ -46,6 +47,7 @@ saveRDS(dadosJulhoASetembro, file = "data/dadosJulhoASetembro.rds")
 sen = setembro %>% filter( senderDepart == 'RACKERS - DATAFLIX' )
 ## Pessoas da tribo dataflix que receberam
 rec = setembro %>% filter( receiverDepart == 'RACKERS - DATAFLIX' )
+
 ## Algumas pessoas específicas que não estão na lista da tribo dataflix
 especificos <- c("isadora.fernandes@dtidigital.com.br", 
                  "raphael.louzada@dtidigital.com.br",
@@ -62,4 +64,8 @@ l2 <- unique(rec$receiverEmail)
 listaenvio <- c(l1,l2,especificos) %>% unique()
 ##  Salvando a lista
 saveRDS(listaenvio, "envioMVp.rds")
+
+
+
+
 

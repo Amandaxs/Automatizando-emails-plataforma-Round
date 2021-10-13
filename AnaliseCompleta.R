@@ -149,8 +149,8 @@ AnaliseDados <- function(user){
     
     Obrigada!
 "
-  Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\projetoRound\\Resumo.png")
-  Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\projetoRound\\Nuvem.png")
+  Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\Automatizando-emails-plataforma-Round\\Resumo.png")
+  Email[["attachments"]]$Add("C:\\Users\\DPCDTI\\Desktop\\Automatizando-emails-plataforma-Round\\Nuvem.png")
   Email$Send()
   rm(Outlook, Email) 
   message = paste("email enviado para: ", user)

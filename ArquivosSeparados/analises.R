@@ -40,7 +40,7 @@ top3doados <- dfdoados %>%
 # Vendo a tabela de resultado
 top3doados
 # Salvando como imagem
-#save_as_image(top3doados, path = "top3d.png")
+save_as_image(top3doados, path = "top3d.png")
     
 ## Tabela com o top3 recebidos
 top3recebidos <- dfrecebido %>% 
@@ -51,7 +51,7 @@ top3recebidos <- dfrecebido %>%
   arrange(desc(quantity)) %>% 
   rename(Nome = senderName , Quantidade = quantity ) %>%
   head(3)%>% 
-  flextable::flextable() %>%
+  flextable() %>%
   autofit()
 # Vendo a tabela
 top3recebidos
